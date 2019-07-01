@@ -4,14 +4,15 @@ package nats_f5
 import (
         "fmt"
         "log"
-	"bufio"
-	"os"
-	"strings"
+	//"bufio"
+	//"os"
+	//"strings"
+	"time"
         "github.com/nats-io/go-nats"
 )
 
 
-func publish_f5(subject string, msg string) {
+func Publish_f5(subject string, msg string) {
         // [begin publish_bytes]
         nc, err := nats.Connect(nats.DefaultURL)
         if err != nil {
@@ -29,7 +30,7 @@ func publish_f5(subject string, msg string) {
 }
 
 
-func subscribe_f5(subject string)string{
+func Subscribe_f5(subject string)string{
 	nc, err := nats.Connect(nats.DefaultURL)
         if err != nil {
                 log.Fatal(err)
@@ -54,7 +55,7 @@ func subscribe_f5(subject string)string{
 	// Close the connection
         nc.Close()
 
-	return msg.Data
+	return string(msg.Data)
 
 
 }
