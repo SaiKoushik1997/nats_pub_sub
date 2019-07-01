@@ -3,10 +3,10 @@
 package main
 
 import (
-        "log"
+        //"log"
         "time"
 	"fmt"
-        "github.com/nats-io/go-nats"
+        //"github.com/nats-io/go-nats"
 )
 
 func subscribe_f5(subject string)string{
