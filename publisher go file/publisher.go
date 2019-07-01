@@ -4,11 +4,11 @@ package main
 
 import (
         "fmt"
-        "log"
+        //"log"
 	      "bufio"
 	      "os"
 	      "strings"
-        "github.com/nats-io/go-nats"
+        //"github.com/nats-io/go-nats"
 )
 
 func publish_f5(subject string, msg string) {
@@ -45,7 +45,7 @@ func main(){
 		publish_f5(subject, msg)
 
 	fmt.Println("Enter 0 for wait again\n		1 for exit")
-	fmt.Scan(trigger)
+	fmt.Scan(&trigger)
 	
 }
 }
